@@ -1,0 +1,20 @@
+.customer-details {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+  .customer-details h2 {
+    color: green;
+  }
+
+  .customer-details p {
+    margin: 5px 0;
+  }
+
+  .customer-details button {
+    margin-top: 20px;
+    background-color: green;
+    color: white;
+  }

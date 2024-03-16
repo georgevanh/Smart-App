@@ -1,0 +1,6 @@
+@SmartExercise.Server_HostAddress = http://localhost:5059
+
+GET {{SmartExercise.Server_HostAddress}}/api/v1/customer/
+Accept: application/json
+
+###
