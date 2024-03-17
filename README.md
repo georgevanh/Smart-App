@@ -48,7 +48,7 @@ Build the solution to restore dependencies.
 
 Run the application.
 
-Enter your API keys in both production and development environment.
+Enter your API keys in both production and development environment as needed. You can enhance the security of the key by storing on KeyVault or encrypt the keys.
 
 Change the trusted domains as needed. 
 
@@ -60,7 +60,7 @@ Install dependencies by running npm install.
 
 Start the Angular development server by running ng serve.
 
-Enter your Google Place API key and APIKey to authenticate to backend APIs in both production and development environment files.
+Enter your Google Place API key and APIKey to authenticate to backend APIs in both production and development environment files. . You can enhance the security of the key by storing on KeyVault or encrypt the keys.
 
 Open your browser and navigate to https://127.0.0.1:4200/.
 
@@ -117,9 +117,13 @@ APIs
 
 
 Front pages:
+
 Home Page:
+
 ![image](https://github.com/georgevanh/SmartApp/assets/163656914/157c77c2-1b8e-4227-9596-eab4bdfc133d)
+
 Customer Adding Page with Address Look up:
+
 ![image](https://github.com/georgevanh/Smart-App/assets/163656914/56605e3a-795a-4f24-a8c9-9d7ca88f101a)
 
 
