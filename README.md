@@ -110,30 +110,37 @@ This project is licensed under the MIT License.
 Screenshots:
 APIs
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/4bc4e5e9-c03b-47f8-a1d0-f02bfcc6a848)
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/5c114080-e1d8-4b73-b9dd-f6a5d03e04c9)
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/04f05a9b-14fe-4c2a-bcdf-34e631720084)
+
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/e8f0d6e7-0590-4114-b9f3-fdb41240d096)
+
 
 Front pages:
 Home Page:
 ![image](https://github.com/georgevanh/SmartApp/assets/163656914/157c77c2-1b8e-4227-9596-eab4bdfc133d)
 Customer Adding Page with Address Look up:
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/61fe32b5-f229-48f4-ac72-ccf4522db964)
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/56605e3a-795a-4f24-a8c9-9d7ca88f101a)
+
 
 Only adding customer with valid Australian Mobile Number:
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/5a5aec32-bc46-4362-9de8-cf8d2910c1eb)
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/84a2f7b9-41f3-4ab3-8d05-2dcf5fc765ca)
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/bfe112a6-e1f9-4eef-9afc-e6c7f3b85f88)
+
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/7e4f1649-f08f-443c-8751-56380b3c98f1)
+
 
 
 List page:
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/a90d15ec-fc5e-4a0b-9f49-be515aed501f)
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/a596e559-3b05-464c-899b-7e7edb1e1f60)
+
 
 Detailed page:
 
-![image](https://github.com/georgevanh/SmartApp/assets/163656914/867d822e-1076-4d76-b309-203b41629137)
+![image](https://github.com/georgevanh/Smart-App/assets/163656914/4efbd829-443f-4086-b094-086eb42dc5fe)
+
 
 
 
