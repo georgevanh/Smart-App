@@ -13,6 +13,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
+import { AddressInputComponent } from './address-input/address-input.component';
+
 
 
 
@@ -21,7 +23,8 @@ import { MatIconModule } from '@angular/material/icon';
     AppComponent,
     CustomerListComponent,
     CustomerDetailsComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    AddressInputComponent
   ],
   imports: [
     FormsModule,
@@ -34,6 +37,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatSnackBarModule,
     MatIconModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 <div class="container">
+
   <h2>Add Customer</h2>
   <form class="customer-form" (ngSubmit)="onSubmit()" novalidate>
     <div class="form-group">
@@ -27,15 +28,16 @@
       </mat-form-field>
     </div>
     <div class="form-group">
+
       <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput [(ngModel)]="address" name="address" required>
-        
+        <app-address-input name="address" [(ngModel)]="address"></app-address-input>
+
+
       </mat-form-field>
-      <button mat-icon-button (click)="getAddress()">
-        <mat-icon>search</mat-icon>
-      </button>
+
+      
     </div>
+
     <div class="button-container">
       <button mat-raised-button color="accent" type="submit">Add Customer</button>
       <button mat-raised-button type="button" (click)="cancel()">Cancel</button>

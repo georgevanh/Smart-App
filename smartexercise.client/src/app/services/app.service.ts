@@ -1,14 +1,17 @@
 // app.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
+  private readonly GOOGLE_MAPS_API_URL = environment.GOOGLE_MAPS_API_URL;
+  private readonly GOOGLE_MAPS_API_KEY = environment.GOOGLE_MAPS_API_KEY;
   constructor(private http: HttpClient) { }
 
   getAddress(address: string) {
-    return this.http.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=YOUR_API_KEY`);
+    const url = `${this.GOOGLE_MAPS_API_URL}?address=${address}&key=${this.GOOGLE_MAPS_API_KEY}`;
+    return this.http.get(url);    
   }
 }

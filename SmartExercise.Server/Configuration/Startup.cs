@@ -15,6 +15,8 @@ using Microsoft.OpenApi.Models;
 using SmartExercise.Server.Models;
 
 using SmartExercise.Server.Utilities;
+using System.Text.Json;
+using System.Text.RegularExpressions;
 
 namespace SmartExercise.Server.Configuration
 {
@@ -32,6 +34,14 @@ namespace SmartExercise.Server.Configuration
         {
             // Read API key from configuration
             string apiKey = Configuration.GetSection("APIKey")?.Value ?? String.Empty;
+            
+            string trustedDomainsString = Configuration.GetSection("TrustedDomains")?.Value ?? string.Empty;
+
+            string[] trustedDomainsArr = trustedDomainsString
+                .Split(',')
+                .Select(domain => domain.Replace("\\", "").Replace("\"", "").Trim('\"').Trim()) // Remove escape characters and single quotes
+                .ToArray();
+
             services.AddAuthentication(ApiKeyAuthenticationHandler.AuthenticationScheme)
                 .AddScheme<ApiKeyAuthenticationSchemeOptions, ApiKeyAuthenticationHandler>(
                     ApiKeyAuthenticationHandler.AuthenticationScheme,
@@ -88,7 +98,7 @@ namespace SmartExercise.Server.Configuration
                 options.AddPolicy("AllowSpecificOrigins",
                     builder =>
                     {
-                        builder.WithOrigins("https://localhost", "http://localhost", "https://127.0.0.1:4200")
+                        builder.WithOrigins(trustedDomainsArr)
                             .AllowAnyMethod()
                             .AllowAnyHeader();
                     });

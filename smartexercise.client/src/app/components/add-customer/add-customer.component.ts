@@ -30,7 +30,6 @@ export class AddCustomerComponent implements OnInit {
       mobileNumber: this.mobileNumber,
       address: this.address
     };
-
     this.customerService.addCustomer(newCustomer)
       .subscribe(
         () => {
@@ -53,10 +52,6 @@ export class AddCustomerComponent implements OnInit {
       );
   }
   cancel(): void {
-    this.router.navigate(['/']);
-  }
-
-  getAddress(): void {
     this.router.navigate(['/']);
   }
 }
