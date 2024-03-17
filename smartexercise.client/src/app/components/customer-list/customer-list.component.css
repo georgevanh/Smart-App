@@ -1,5 +1,5 @@
 .customer-table {
-  border: 2px solid #3CB371; /* Green border */
+  border: 2px solid #3CB371;
   border-collapse: collapse;
   width: 80%;
   margin-top: 20px;
@@ -8,31 +8,31 @@
 }
 
 .table-header, .table-row {
-  display: table-row;
+  display: flex; /* Change to flex */
 }
 
 .table-cell {
-  display: table-cell;
+  flex: 1; /* Use flex-grow to distribute space equally */
   padding: 10px;
   text-align: center;
 }
 
 .table-header {
-  background-color: #3CB371; /* Green background */
+  background-color: #3CB371;
   color: white;
   font-weight: bold;
 }
 
 .table-body {
-  background-color: #f2f2f2; /* Light grey background */
+  background-color: #f2f2f2;
 }
 
 .table-row:nth-child(even) {
-  background-color: #f2f2f2; /* Light grey background for even rows */
+  background-color: #f2f2f2;
 }
 
 .green-button {
-  background-color: #3CB371; /* Green button */
+  background-color: #3CB371;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -46,12 +46,11 @@
 }
 
   .green-button:hover {
-    background-color: #5fd25f; /* Darker green on hover */
+    background-color: #5fd25f;
   }
+
 .table-container {
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
-

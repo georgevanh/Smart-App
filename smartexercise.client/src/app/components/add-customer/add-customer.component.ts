@@ -1,4 +1,3 @@
-// add-customer.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
 import { Customer } from '../../models/customer.model';
@@ -23,6 +22,11 @@ export class AddCustomerComponent implements OnInit {
   ngOnInit(): void { }
 
   onSubmit(): void {
+    if (!this.validateForm()) {
+      return; // Halt the script if validation fails
+    }
+    
+
     const newCustomer: Customer = {
       firstName: this.firstName,
       lastName: this.lastName,
@@ -50,6 +54,38 @@ export class AddCustomerComponent implements OnInit {
           // Optionally, handle the error, display a message, or perform other actions
         }
       );
+  }
+  validateForm(): boolean {
+    // Check if all fields are filled
+    if (!this.firstName || !this.lastName || !this.email || !this.mobileNumber || !this.address) {
+      this.snackBar.open('Please fill in all fields', 'Close', {
+        duration: 3000,
+        panelClass: ['error-toast']
+      });
+      return false;
+    }
+
+    // Validate email format
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailPattern.test(this.email)) {
+      this.snackBar.open('Invalid email format', 'Close', {
+        duration: 3000,
+        panelClass: ['error-toast']
+      });
+      return false;
+    }
+
+    // Validate mobile number format
+    const mobilePattern = /^04\d{8}$/;
+    if (!mobilePattern.test(this.mobileNumber)) {
+      this.snackBar.open('Invalid Australian mobile number format', 'Close', {
+        duration: 3000,
+        panelClass: ['error-toast']
+      });
+      return false;
+    }
+    // If all validations pass, return true
+    return true;
   }
   cancel(): void {
     this.router.navigate(['/']);

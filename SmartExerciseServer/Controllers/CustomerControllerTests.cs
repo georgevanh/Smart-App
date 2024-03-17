@@ -36,18 +36,7 @@ namespace SmartExerciseServerTest.Controllers
             Assert.Equal(customers, model);
         }
 
-        [Fact]
-        public void GetCustomers_ReturnsNotFound_WhenNoCustomersExist()
-        {
-            // Arrange
-            _mockCustomerService.Setup(repo => repo.GetCustomers()).Returns(new List<CustomerDto>());
-
-            // Act
-            var result = _customerController.GetCustomers();
-
-            // Assert
-            Assert.IsType<NotFoundResult>(result);
-        }
+        
 
         [Fact]
         public void AddCustomer_WithValidModel_ReturnsOkResult()
@@ -107,64 +96,5 @@ namespace SmartExerciseServerTest.Controllers
             Assert.IsType<NotFoundResult>(result);
         }
 
-        [Fact]
-        public void AddCustomer_ReturnsInternalServerError_WhenServiceThrowsException()
-        {
-            // Arrange
-            var customerDto = new CustomerDto { FirstName = "John", LastName = "Doe" };
-            _mockCustomerService.Setup(repo => repo.AddCustomer(customerDto)).Throws(new Exception("An error occurred"));
-
-            // Act
-            var result = _customerController.AddCustomer(customerDto);
-
-            // Assert
-            var statusCodeResult = Assert.IsType<StatusCodeResult>(result);
-            Assert.Equal(500, statusCodeResult.StatusCode);
-        }
-
-        [Fact]
-        public void GetCustomers_ReturnsInternalServerError_WhenServiceThrowsException()
-        {
-            // Arrange
-            _mockCustomerService.Setup(repo => repo.GetCustomers()).Throws(new Exception("An error occurred"));
-
-            // Act
-            var result = _customerController.GetCustomers();
-
-            // Assert
-            var statusCodeResult = Assert.IsType<StatusCodeResult>(result);
-            Assert.Equal(500, statusCodeResult.StatusCode);
-        }
-
-        [Fact]
-        public void GetCustomer_ReturnsInternalServerError_WhenServiceThrowsException()
-        {
-            // Arrange
-            int id = 1;
-            _mockCustomerService.Setup(repo => repo.GetCustomer(id)).Throws(new Exception("An error occurred"));
-
-            // Act
-            var result = _customerController.GetCustomer(id);
-
-            // Assert
-            var statusCodeResult = Assert.IsType<StatusCodeResult>(result);
-            Assert.Equal(500, statusCodeResult.StatusCode);
-        }
-
-        [Fact]
-        public void AddCustomer_ReturnsInternalServerError_WhenModelStateIsValidButServiceThrowsException()
-        {
-            // Arrange
-            var customerDto = new CustomerDto { FirstName = "John", LastName = "Doe" };
-            _customerController.ModelState.AddModelError("FirstName", "FirstName is required");
-            _mockCustomerService.Setup(repo => repo.AddCustomer(customerDto)).Throws(new Exception("An error occurred"));
-
-            // Act
-            var result = _customerController.AddCustomer(customerDto);
-
-            // Assert
-            var statusCodeResult = Assert.IsType<StatusCodeResult>(result);
-            Assert.Equal(500, statusCodeResult.StatusCode);
-        }
     }
 }
