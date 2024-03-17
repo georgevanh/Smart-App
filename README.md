@@ -9,7 +9,7 @@ The app is mobile friendly and provide a web Single Page Application with APIs f
 
 Features
 
-Allows users to manage customer data and can allow other apps to consume the Web APIs via Rest protocols.
+Allows users to manage customer data and can allow other apps to consume the Web APIs via REST protocols.
 
 Provides CRUD (Create, Read, Update, Delete) operations for customers.
 
