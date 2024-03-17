@@ -5,10 +5,11 @@ Overview
 
 
 The Smart App is a web application developed using ASP.NET Core 8 on the backend, Angular 13.3.0 on the frontend, Google Place API for Address look up and Entity Framework Core with an in-memory database. It follows the repository pattern for data access and management.
+The app is mobile friendly and provide a web Single Page Application with APIs for capturing customer data and display in a list and detailed view.
 
 Features
 
-Allows users to manage customer data.
+Allows users to manage customer data and can allow other apps to consume the Web APIs via Restfull protocols.
 
 Provides CRUD (Create, Read, Update, Delete) operations for customers.
 
@@ -48,7 +49,7 @@ Build the solution to restore dependencies.
 
 Run the application.
 
-Enter your API keys in both production and development environment as needed. You can enhance the security of the key by storing on KeyVault or encrypt the keys.
+Enter your owned API keys in both production and development config files as needed. You can enhance the security of the key by storing on KeyVault or encrypt the keys.
 
 Change the trusted domains as needed. 
 
@@ -60,7 +61,7 @@ Install dependencies by running npm install.
 
 Start the Angular development server by running ng serve.
 
-Enter your Google Place API key and APIKey to authenticate to backend APIs in both production and development environment files. . You can enhance the security of the key by storing on KeyVault or encrypt the keys.
+Enter your owned Google Place API key and APIKey to authenticate to backend APIs in both production and development environment files. . You can enhance the security of the key by storing on KeyVault or encrypt the keys.
 
 Open your browser and navigate to https://127.0.0.1:4200/.
 
